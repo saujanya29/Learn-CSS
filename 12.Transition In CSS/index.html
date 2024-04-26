@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition in CSS</title>
+    <style>
+        .box{
+            background-color: beige;
+            border:3px solid brown;
+            height: 400px;
+            width: 400px;
+             
+            /* Transition in CSS */
+            /* Setting transition-property : all  , it will change all the property simultaneously so the color also changes gradually */
+            transition-property: all;
+            transition-duration: 1s;   
+            transition-delay: 0;     
+            /* there many values to timing function with different kind of transition */
+            transition-timing-function: ease-out;
+
+
+            /* Shorthand Property
+            property : duration : timing-function :delay
+  */ 
+             transition: all 1s ease-in 1s;
+             
+            
+
+        }
+        
+        /*  this  Require a trigger to run (like mouse hover)  */
+        .box:hover{
+            background-color: blue;
+            width: 800px;
+            height: 600px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+
+    </div>
+</body>
+</html>

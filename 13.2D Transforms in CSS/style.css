@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: beige;
+    border: 3px solid red;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 400px;
+    height: 400px;
+    background-color: aqua;
+    border: 3px solid green;
+    padding: 30px;
+
+
+   
+/* This transition will make tranform changes occur smoothly */
+   transition: all 1s linear 0s;
+   
+}
+
+.box:hover{
+     /* Transform :  This property allows you to rotate, scale, move, skew, etc., elements. */
+     transform: rotate(45deg);
+     transform: scale(2);
+     transform: skew(-45deg);
+     transform: rotate(360deg);
+     
+    /* translate in x and y axis  */
+     transform: translate(500px,500px);
+}
+
+p{
+    font-size: 36px;
+}

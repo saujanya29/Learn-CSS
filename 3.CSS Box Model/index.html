@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+
+ <style>
+    /* Universal Selector  */
+    /* This is Standard practice to Remove default margin and padding by making them 0 */
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+   h1{
+     background-color: aquamarine;
+     /* this property defines type of border we want on the element  */
+     border-style: solid;
+     border-width: 2px;
+     border-color: brown;
+
+     /* Shorthand Property for all above three lines  */
+
+     border: solid brown 2px;
+
+     /* 
+     --> border radius will add round corners on the borders 
+
+     border-radius: 5px;
+     
+    --> To add border radius in any particular sides then you can use these properties
+
+     border-top-left-radius: 5px;
+     
+    --> if You need border only in left or in some fixed sides so use this
+
+     border-left: solid black 5px;
+     
+     */
+
+     border: solid black 3px;
+     border-radius: 5px;
+     width: 350px;
+     /* height: 200px; */
+
+   }
+
+  .firstPara{
+    background-color: crimson;
+    border: solid black 3px;
+    border-radius: 3px;
+    width: 350px;
+
+   /* -->Padding is space between content and border  
+      --> Margin is Space between two boxes 
+   */
+
+   /* padding: 90px;
+   margin: 90px;
+   height: 200px;
+   padding-left: 10px; */
+
+
+
+   /* padding-left: 10px;
+   padding-top: 20px;
+   padding-right: 30px;
+   padding-bottom: 40px; */
+
+   /* Shorhand Property for above four padding property */
+   /* padding: 10px 20px 30px 40px; */
+
+   /* Similary for Margins */
+
+   /* margin: 30px;
+   margin-top: 100px;
+   margin-left: 20px; */
+
+
+  }
+
+  .secondPara{
+    background-color: beige;
+    border: solid black 3px;
+    border-radius: 5px;
+    width: 350px;
+  }
+
+ .thirdPara{
+    background-color:yellow;
+    border: solid black 3px;
+    border-radius: 5px;
+    width: 350px;
+ }
+
+span{ 
+    /* Span is Inline element so custom width and height is not respected , it takes size eqaul to content size  */
+     background-color: darkcyan;
+     border: solid black 3px;
+     border-radius: 5px;
+     width: 350px;
+     height: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+  <!-- Note - Everthing on HTML is Seen As Box Model it will be rendered like the box this concept is called BoxModel -->
+
+    <h1>Welcome To CodeHelp</h1>
+
+    <span>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus cumque voluptatibus minus porro! Dignissimos, asperiores!
+    </span>
+
+    <p class="firstPara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat esse quos ex totam asperiores aperiam blanditiis voluptatum labore libero incidunt neque rem quaerat dolor amet numquam atque molestias omnis illo veniam dolore, facilis iste!</p>
+    <p class="secondPara">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae necessitatibus minus eos voluptatum inventore quod dicta quae ea debitis eius.</p>
+    <p class="thirdPara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, esse vero molestias, nostrum aliquam similique sapiente sunt minima nulla libero cupiditate.</p>
+  
+
+</body>
+</html>

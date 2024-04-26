@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 600px;
+    border: 2px solid red;
+    /* This will define gap between the rows and column */
+    row-gap: 10px;
+    column-gap: 10px;
+
+
+    display: grid;
+
+
+  /* grid-template-columns is used to define number of column in the grid */
+
+  /* Different ways to define the columns :*/
+
+  /* 2 column of the 200px size will be created and rest space will be left empty */
+    /* grid-template-columns: 200px 200px; */
+
+  /*  2 column of the 30% and 50% width will be created and rest space will be left empty */
+    /* grid-template-columns: 30% 50% ; */
+
+  /* here 3 columns will be created with equal width */
+    /* grid-template-columns: auto auto auto; */
+
+  /* three column will be created in which 1st one will be having double fraction of width of others  */
+    /* grid-template-columns: 2fr 1fr 1fr; */
+
+
+    grid-template-columns: 200px 200px 300px;
+
+
+
+
+    /* SIMILARLY FOR ROWS */
+     /* First box with 200px width and second with 80px and rest will accuire rest part equally  */
+     /* grid-template-rows: 200px 80px; */
+
+
+    /* rows whose width is not defined will have this width */
+    /* grid-auto-rows: 150px; */
+
+    
+    /* This is make the grid to center horizontally */
+    /* justify-content: center; */
+
+    /* This is make the grid to center vertically */
+    /* align-content: center; */
+
+    /* This will align the item in the box */
+    /* align-items: end; */
+
+   /* This is to create layout with names but for this we need to specify names to boxes  
+    you need to remove all the dimensions given to boxes to see this property effect visible*/
+    /* grid-template-areas: "hdr hdr hdr hdr "
+                         "sbr main main main"
+                         "sbr main main main"
+                         "sbr main main main"
+                         "ftr ftr ftr ftr"; */
+
+
+}
+.box{
+    border: 2px solid green;
+    padding: 10px;
+
+}
+
+#box1{
+    grid-area: hdr;
+}
+#box2{
+    grid-area: sbr;
+}
+#box3{
+    grid-area: main;
+}
+#box4{
+    grid-area: ftr;
+}
+
+
+/* Lets define span of row and column of the box */
+#box1{
+    background-color: bisque;
+    /* this propert will align the box in the imaginary box created around it . inspect it to undestand */
+    /* align-self: center; */
+
+    /* To specify the start and end columnof the box */
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+
+    /* Shorthand for above two lines  */
+    grid-column: 1/3;
+
+    /* Similarly for rows */
+    grid-row: 1/3;
+
+    /* Shorthand for row and col both 
+     rowst  colst rowend colend           */
+  
+     grid-area: 1/2/3/3;
+
+}
+

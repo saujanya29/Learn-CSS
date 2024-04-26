@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Layout Using Grid</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 600px;
+          border: 2px solid red;
+          display: grid;
+          row-gap: 10px;
+          column-gap: 10px;
+
+        }
+        .box{
+            border: 2px solid green;
+            padding: 10px;
+        }
+        #box1{
+            grid-column: 1/4;
+        }
+        #box2{
+             grid-row: 2/6;
+             
+        }
+        #box3{
+            grid-column: 2/3;
+            grid-row: 2/6;
+        }
+        #box4{
+            grid-column: 3/3;
+            grid-row: 2/6;
+        }
+        #box5{
+            grid-column: 1/4;
+        }
+    </style>
+</head>
+<body>
+      
+    <div class="container">
+        <div class="box" id="box1">header</div>
+        <div class="box" id="box2">Navigation</div>
+        <div class="box" id="box3">Main</div>
+        <div class="box" id="box4">Advertisement</div>
+        <div class="box" id="box5">Footer</div>
+    </div>
+
+
+
+</body>
+</html>

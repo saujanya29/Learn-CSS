@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS : Sizes</title>
+ 
+    <style>
+
+
+/* Note : Different size In CSS 
+
+1.Percentage(%) : This is Relative to Parent width
+2.ViewWidth and ViewHeight(vw & vh) : it is relative to the root size 
+3.Pixels : It is number of pixel in the screem
+4.em : em is relative to parent and to calculate in pixel multiply by parent font size in the childs font size which is in em
+5.Rem : rem is relative to the root font size which 16px so multiply by 16 to get the font size of child in pixels
+
+
+ */
+
+
+
+       *{
+        margin: 0;
+        padding: 0;
+       }
+/* 1. PERCENTAGE UNIT */
+
+       /* .box{
+        border: 2px solid green;
+        width: 25%;
+       } */
+
+
+
+       /* Here Parent width is 50% */
+/*     .parent{
+        border: 3px solid green;
+        background-color: aqua;
+        width: 50%;
+       }
+ */
+
+       /* So Child Width Will be 25% of Parents width not the Body width  */
+
+ /*    .child{
+        border: 3px solid yellow;
+        background-color: aquamarine;
+        width: 25%;
+       } 
+*/
+
+
+/* 2. VIEWWIDTH AND VIEWHEIGHT UNITS */
+
+/* .container{
+    border: 3px solid magenta;
+    background-color: darkgoldenrod;
+    width: 50vw;
+    height: 100vh;
+} */
+
+
+/* 3.PIXELS UNIT */
+
+/* .box1{
+    border: 3px solid navajowhite;
+    background-color: crimson;
+    font-size: 100px;
+
+} */
+
+/* 4.EM and REM UNITS */
+
+/* Here Parent is Container and its font size is 10px and Child font size is 10 rem where 1 rem 
+will be equal to the font size of parent thus font size of child will be equal to (10 * 10 px = 100px)
+
+if we make child font size 10rem then it will be relative to root and root font size is by default 16px
+so Child font size will be equal to (10*16px == 160px)
+
+*/
+.Containerfirst{
+    font-size: 10px;
+}
+.box{
+    /* font-size: 10em; */
+    font-size: 10rem;
+}
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+
+<!-- 
+    
+<div class="box">
+    Welcome to codehelp
+</div> 
+
+-->
+
+<!-- <div class="parent">
+    <div class="child">
+        CHILD
+    </div>
+</div> -->
+
+<!-- <div class="container">
+    This is Saujanya Shukla 
+</div> -->
+
+<!-- <div class="box1">
+  Saujanya Shukla
+</div> -->
+
+<div class="Containerfirst">
+    <div class="box">
+        Welcome To This World 
+    </div>
+</div>
+
+    
+</body>
+</html>

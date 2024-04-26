@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox In CSS</title>
+
+
+   <style>
+    /* Note : Solve the FlexBox Game in Codehelp Website to get clarity about this concept */
+ 
+  /* FLexBox In CSS : 
+
+  
+  
+--> First Make Display :flex;
+1.Flex-direction: 
+                 1.row  -> it will flex the items in horizontal direction 
+                 2.col  ->it will flex the items in Vertical  direction 
+                 3.row-reverse -> it will flex the items in reverse horizontal direction
+                 4.col-reverse  -> it will flex the items in reverse Vertical direction
+  
+2.justify-content : justifly content will work in horizontal dir when flex dir is row or row-reverse
+                    justifly content will work in Vertical dir when flex dir is col or col-reverse
+
+    Properties:  1.start
+                 2.end
+                 3.center
+                 4.space-around : In this there is equal space on the both sides of each flex items
+                 5.space-between :first and last flex item will have no space at their end and other itme will have space
+                 6.space-evenly: here even means equal space will be betweenn the all the flex items
+  
+ 3. align-items: This will work same as the justify content but in opposite dir
+                
+ --> align-items will work in Vertical dir (cross -axis )when flex dir is row or row-reverse
+ -->align-items will work in Horizontal dir (Main-axis )when flex dir is col or col-reverse
+  
+
+ 4.align-content: 1.This aligns a flex container’s lines within when there is extra space in the cross-axis, 
+                  2.The CSS align-content property sets the distribution of space between and around content items along a flexbox's cross-axis
+
+ 5.align-self : The align-self CSS property overrides a grid or flex item's align-items value
+  
+6.flex-items: Properties for the children
+ 
+            1.Order: decides in which order they will appear
+            2.flex-grow: it will decide the speed at which flex item expand 
+            (if flex-grow set to 1, the remaining space in the container will be distributed equally to all children)
+            3.flex-shrink: it will decide the speed at which flex item shrink
+            4.flex-basis:The flex-basis property specifies the initial length of a flexible item.
+  
+  
+  
+  
+                 */
+
+
+
+    .container{
+        background-color:beige;
+        margin: 2px;
+        padding: 2px;
+        height: 800px;
+        border: 2px solid yellow;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: start;
+        align-content: center;
+
+
+    }
+       
+    .box{
+            
+            width: 200px;
+            height: 200px;
+            border: 2px solid brown;
+            margin: 2px;
+            padding: 2px;
+     }
+    #box1{
+        background-color: aqua;
+        /* this will decide the order of flex items */
+        order: 500;
+        /* This property will make box1 shrink 4 times faster than others */
+        flex-shrink: 4;
+        /*  it will decide the speed at which flex item expand  */
+        /* flex-grow: 1; */
+       
+        /*  Overrides the align items property */
+        align-self: end;
+    }
+       
+    #box2{
+        background-color: blue;
+        /* flex-grow: 1; */
+    }
+    #box3{
+        background-color: orange;
+        /* flex-grow: 1; */
+    }
+    #box4{
+        background-color: brown;
+        /* flex-grow: 1; */
+    }
+       
+
+   </style>
+
+</head>
+<body>
+    
+
+<div class="container">
+  
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+
+
+
+</div>
+
+
+
+
+
+</body>
+</html>

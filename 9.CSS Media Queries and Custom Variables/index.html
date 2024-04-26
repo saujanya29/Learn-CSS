@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries and Custom Variables</title>
+
+   <style>
+          
+          .container{
+            background-color: beige;
+            border: 3px solid brown;
+            margin: 5px;
+            padding: 5px;
+            height: 1000px;
+            width: 700px;
+          }
+
+          .box{
+            background-color: aqua;
+            border: 3px solid rgb(231, 133, 133);
+            margin: 5px;
+            padding: 5px;
+            width: 500px;
+            height: 500px;
+          }
+
+          /* Media Queries : */
+          /* Min-width : means if screen size become eqaul to this or greater than this then this new properties will be applied */
+          /* @media (min-width:500px) {
+            .box{
+                background-color: yellow;
+            }
+          } */
+
+           /* Max-width : means if screen size is upto this width then this new properties will be applied */
+         /* @media (max-width:400px) {
+            .box{
+                background-color: red;
+            }
+         } */
+
+         
+         /* We can use both min and max Properties at the same time  
+          Here between Screen Width 400px to 500px the bg color will be Red.
+         */
+
+         @media    (min-width:400px) and (max-width:500px){
+            .box{
+                background-color: red;
+            }
+         }
+   </style>
+
+
+
+
+</head>
+<body>
+    
+   <div class="container">
+
+         <div class="box">
+            Hello Jee
+         </div>
+
+   </div>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   <style>
+        /* declairing Custom Variable In CSS */
+         :root{
+            --primary-color: red;
+            --custom-width: 500px;
+        }
+   
+   .container{
+    background-color: beige;
+    /* Using Custom Variable in CSS */
+    border: 3px solid var(--primary-color);
+    margin: 5px;
+    padding: 5px;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .box{
+       background-color: #ffb7b7;
+       border: 3px solid red;
+       margin: 5px;
+       padding: 5px;
+       width: var(--custom-width);
+       height: 500px;
+       
+
+       /* Box Shadows: */
+       
+       /* Positive x and y offset will be rightwords andn downwords direction */
+
+       /* offset-x : offset-y : color */
+       box-shadow: 10px 10px red;
+       /* Negative x and y offset will be leftwords andn topwords direction */
+       box-shadow: -10px -10px red;
+       /* offset-x : offset-y : blur-radius : color */
+       box-shadow: 10px 10px 5px red;
+        
+       /* offset-x | offset-y | blur-radius | spread-radius | color */
+       box-shadow: 10px 10px 5px 25px red;
+       /* inset | offset-x | offset-y | color */
+       box-shadow: inset 10px 10px red;
+
+
+       /* Any number of shadows, separated by commas */
+       box-shadow: 10px 10px red,
+                   20px 20px 20px olive;
+
+   }
+   img{
+    width: 100px;
+    height: 100px;
+    align-self: center;
+   }
+
+   #head1{
+    
+        /* offset-x | offset-y | blur-radius | color */
+        text-shadow: 1px 1px 2px black;
+
+        /* color | offset-x | offset-y | blur-radius */
+        text-shadow: #fc0 1px 0 10px;
+
+        /* offset-x | offset-y | color */
+        text-shadow: 5px 5px #558abb;
+
+        /* color | offset-x | offset-y */
+        text-shadow: white 2px 2px;
+
+        /* offset-x | offset-y
+        /* Use defaults for color and blur-radius */
+        /* text-shadow: 5px 10px; */
+   }
+
+
+
+
+
+   </style>
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="box">
+             <img src="logo.svg" alt="">
+            <h1 id="head1">Welcome to CodeHelp</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam reprehenderit at praesentium quas nobis harum fuga modi eius laborum laudantium, voluptatem, dolor saepe! Sed at voluptatibus unde fugiat placeat magni assumenda velit, repellat ipsa eum delectus, quisquam voluptate quos, asperiores nostrum aspernatur! Perspiciatis animi fugit quibusdam? Ad tenetur quis aperiam aliquam nostrum dolores a temporibus? Cupiditate eligendi numquam odit quidem? Omnis, autem? Reprehenderit repudiandae laborum vel nesciunt aspernatur! Nobis, incidunt obcaecati doloremque sapiente, officiis consequuntur eligendi laborum aperiam molestias ullam harum perferendis eius nulla earum laudantium dolorem excepturi! Accusamus veniam tempora laboriosam sequi ipsa? Ducimus officia facilis harum id veniam.</p>
+
+        </div>
+    </div>
+</body>
+</html>

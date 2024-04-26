@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display : Inline ,Block ,Inline-Block</title>
+
+   <style>
+
+    *{
+        margin: 0px;
+        padding: 0;
+        /* Box-sizing: border-box    : this ensures box size doesnt change instead content shrinks */
+        box-sizing: border-box;
+    }
+   
+    .box{
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        padding: 20px;
+        margin: 10px;
+    }
+
+
+  /* Note : We can Change Display Property of Each Element in HTML
+
+Block : 1.Next Element will be in Next Line
+            2.width : Extream left to  extream right
+            3.Custom width and height is respected
+            4.Margin And Padding is respected
+  
+Inline :1.Next Element will be in Same Line
+        2.width : Content width
+        3.Custom width and height is not respected
+        4.Custom Margin And Padding is not respected(margin is applied in horizontal)
+  
+Inline-Block : Works Same as Inline Element with Custom Width and height allowed
+  
+  
+  */
+
+
+
+    span{
+        border: 2px solid green;
+        width: 300px;
+        height: 300px;
+        margin: 5px;
+        padding: 50px;
+        display: inline-block;
+        
+    }
+
+</style>
+
+</head>
+<body>
+    
+
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, modi!
+    </div>
+     
+    <span>
+       This is Love Babbar
+    </span>
+
+    <span>
+        This is Love Babbar
+    </span>
+</body>
+</html>

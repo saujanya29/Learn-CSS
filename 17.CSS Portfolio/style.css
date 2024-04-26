@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Bodoni Moda', serif;
+    font-size: 1.2rem;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    /* This will create gradient background  */
+    background:linear-gradient(to right ,#041308, #0b3317);
+
+}
+
+.left-text{
+    /* this will give width to box */
+    flex-basis: 30%;
+}
+
+.heading{
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+}
+.Subheading{
+    color:#ddd;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.gallery{
+    flex-basis: 50%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* this will specify the height of rows */
+    grid-auto-rows: 120px;
+}
+
+.box{
+    /* CSS property sets the size of the element's background image. */
+    background-size: cover;
+    /* This property will show the top portion of bg image */
+    background-position: top;
+   /* sets the text color of box*/
+    color: white;
+
+    /* This will set the text above the bg img to center of img */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #222;
+    /* blend mode is blending the bg color and img */
+    background-blend-mode: hard-light;
+    /* add some transition for smooth changes*/
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+
+/* Lets create some transition in it using hover subclass */
+
+.box:hover{
+    /* Position and color of bg will change to center and bright when we hover the boxes */
+    background-color: #999;
+    background-position: center;
+    box-shadow: 0 0 4px #fff;;
+}
+
+
+/* Now we need to define span of rows and cols to boxes 
+So we will create a class with their row and column span 
+and them allot those classes to box in html as per need */
+
+.row-2{
+    grid-row: span 2;
+}
+.col-2{
+    grid-column: span 2;
+}
+
+
+/* making Responsive page using media querries */
+
+@media  screen and (max-width : 1024px) {
+
+    .container{
+        flex-direction: column;
+        padding-block: 20px;
+    }
+    .gallery{
+          width: 100%;
+          /* this will add padding to box from both ends */
+          padding-inline: 12px;
+          grid-auto-rows: 220px;
+    }
+    .box{
+        grid-row: span 1;
+        grid-column: span 3;
+    }
+    
+}
+
+

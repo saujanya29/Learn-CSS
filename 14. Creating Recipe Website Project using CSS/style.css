@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    overflow-x: none;
+    background-color: #e2e5e8;
+    background-image: linear-gradient(98deg, #e2e5e8 0%, #ffffff 100%);
+
+
+}
+
+.navContainer{
+    /* background-color: rgb(178, 178, 219); */
+    background-image: linear-gradient(160deg, #0e293e 0%, #8680d0 100%);
+
+   /* This will make navcontainer width same as container */
+    width: 100%;
+    min-height: 80px;
+    /* Making NavContainer flex so navlist can be set in center from vertical and horizontal axis both */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+    
+}
+#navLogo{
+    font-size: 2.8rem;
+    color: azure;
+}
+a{
+    color: azure;
+   font-size: 2.5rem;
+   /* This will remove the dot from lists */
+   text-decoration: none;
+    
+}
+
+nav{
+    /* Making nav width 100%  */
+    width: 100%;
+}
+
+#navlist{
+      width: 100%;
+      padding: 15px;
+      /* margin-left: 15px;
+      margin-right: 15px; */
+      list-style: none;
+      font-size: 2.5rem;
+      /* making navList flex so that navlogo and navitems can be placed at ends   */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+}
+#navItems{
+    /* Making navitems flex so that can add gap in between the items and flex direction is row here by default */
+    display: flex;
+    gap: 40px;
+}
+.footerBox{
+    width: 100%;
+    background-image: linear-gradient(160deg, #0e293e 0%, #8680d0 100%);
+
+    min-height: 40px;
+    /* This will align text in the center */
+    text-align: center;
+
+}
+.footerBox p{
+    color: azure;
+    font-size: 2rem;
+}
+
+.contentBox{
+    width: 60%;
+    /* Margin : auto will place this content box in the middle */
+    margin: auto;
+    background-color: white;
+    /* border: 1px solid black; */
+    /* Marking content box flex so the each item can be showed using flex direction - column */
+    display: flex;
+    flex-direction: column;
+    /* This will create a gap between each items */
+    gap: 100px;
+    /* Padding will keep the items in the middle of the content box */
+    padding: 3rem;
+    box-shadow: 0px 0px 30px black;
+}
+.items{
+    /* Making item as flex will make leftbox and rightbox at ends using space-around and at center vertically due to align=items property  */
+    display:flex ;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.rightBox{
+    /* for making overlay on the top of the rightBox we need to mark rightBox position relative and overlay as absolute  */
+    position: relative;
+    overflow: hidden;
+    /* Transition will make all the changes smoothly */
+    transition: all 0.3s linear 0s;
+    box-shadow: 1px 1px 10px black;
+    /* This will make the rightbox Circular */
+    border-radius: 50%;
+}
+
+
+.rightBox .overlay span{
+    /* Specifying some properties of span */
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+.rightBox img{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    /* This will remove the extra white space between rightBox and overlay */
+    vertical-align: bottom;
+    /* transition: all 0.3s linear 0s; */
+
+}
+
+.rightBox:hover{
+    /* creating hower in the rightBox which will Transform the rightBox Scale  */
+    transform: scale(1.1);
+}
+
+.leftBox{
+    /* Making leftbox a flex and dir column */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.leftBox h2{
+    font-size: 2rem;
+}
+.ingBox{
+      font-size: 1.3rem;
+}
+.recipeBox{
+    font-size: 1.1rem;
+}
+
+.rightBox .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(54, 49, 49, 0.492);
+    border-radius: 50%;
+    /* Marking overlay as flex so the span tag can be placed at the center from vertical and horixontal both */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Opacity will decide the visibility of the overlay */
+    opacity: 0;
+    /* Just to make all the changes smooth */
+    transition: all 0.3s linear 0s;
+}
+.rightBox:hover .overlay{
+    /* Creating the hiver to make opacity 1 means making overlay visible at time of hovering 
+    --> this hover will be created after the first one (rightbox) so that the effects of both stay visible
+    */
+   opacity: 1;
+}
+
+
+/* Questions why right circle has some white border at the borders */
+

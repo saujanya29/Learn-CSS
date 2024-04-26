@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: Position </title>
+
+  <style>
+ 
+      div{
+        border: 1px solid black;
+      }
+
+    img{
+        margin: 10px;
+    }
+
+
+
+    /* Note : CSS Display Property 
+    Static : This is By Default property so top,left,right,bottom property wont work here
+
+    Relative: 1.Position change relative to Current window
+              2.top,left,right,bottom properties can be used
+              3.the Gap will be maintained means that the space where the picture was initially ,that space will be left black there
+
+    Absolute :
+              1.Position change relative to closest Ancesstor
+              2.Mark The Position of Ancesstor Relative(Good Practice)
+              3.top,left,right,bottom properties can be used
+              4.the Gap will not be maintained , other elements will occupie the space of this element 
+
+     Fixed :  Position Fixed Throughout The Screen        
+             Gap is maintained
+
+     Sticky : 1.Position is Sticky relative to Ancesstor
+              2.Specify any top.left.right.bottom property to see the change
+              3.it will stick to scrolling till its ancesstor reaches to end
+              4.Gap Is Maintained
+
+     */
+
+
+
+
+    .img2{
+
+/*     Relative -> 
+          position: relative;
+          top: 30px;
+          left: 200px; 
+*/
+
+/*  Absolute ->
+        position: absolute;
+        top: 100px;
+        left: 100px;
+*/   
+     top: 10px;
+
+    }
+  
+    /* Marked img4 fixed  */
+    .img4{
+        position: fixed;
+    }
+
+    /* Marked img3 Sticky  */
+    .img3{
+     position: sticky;
+     top: 30px;
+    }
+    
+    /* Marked Container Relative to See the Absolute Position property */
+   .container{
+       position: relative;
+       height: 8000px;
+       background-color: beige;
+   }
+
+   /* Created Another container to see the sticky and fixed Behavior of img */
+   .box{ 
+    background-color: aquamarine;
+    height: 5000px;
+   }
+
+  
+
+
+  </style>
+
+
+
+
+</head>
+<body> 
+
+    
+    <div class="container">
+    
+        <img 
+        src="img1.jpg" alt="image1"
+        width="300px"
+        height="300px"
+        class="img1"
+        >
+
+        <img 
+        src="img2.jpeg" 
+        alt="image2"
+        width="300px"
+        height="300px"
+        class="img2"
+        >
+
+        <img 
+        src="img3.jpeg" 
+        alt="image3"
+        width="300px"
+        height="300px"
+        class="img3"
+        >
+
+        <img 
+        src="img4.jpg"
+         alt="image4"
+        width="300px"
+        height="300px"
+        class="img4"
+         >
+
+
+    </div>
+
+    <div class="box">
+
+    </div>
+</body>
+</html>

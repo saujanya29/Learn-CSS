@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations Ka Gyan</title>
+
+
+    <!-- 
+        You can read documentation to explore different properties
+     -->
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing:border-box;
+        }
+        .container{
+            background-color: beige;
+            border: 3px solid red;
+            height: 100vh;
+            width: 100vw;
+        }
+        .box{
+            width: 350px;
+            height: 80px;
+            background-color: blue;
+            border: 3px solid red;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+            position: relative;
+
+       /* Animation properties  */
+           /* animation-name: rightMovement;
+           animation-timing-function: linear;
+           animation-duration: 5s;
+           animation-delay: 0s;
+           animation-iteration-count: 2;
+           animation-direction: alternate; */
+      
+           /* ShortHand Property */
+
+          /* @keyframes duration | easing-function | delay |
+            iteration-count | direction | fill-mode | play-state | name */
+           
+            animation: 5s linear 1s infinite alternate none running rightMovement;
+
+        }
+
+        @keyframes  rightMovement {
+             From{
+                 top: 0;
+                 left: 0;
+             }
+             to{
+                top: 0;
+                left: 1300px;
+             }
+        }
+
+        .box2{
+            width: 350px;
+            height: 80px;
+            background-color: blue;
+            border: 3px solid red;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+            position: relative;
+
+             /* @keyframes duration | easing-function | delay |
+            iteration-count | direction | fill-mode | play-state | name */
+           
+            animation: 5s linear 1s infinite alternate none running leftMovement;
+        }
+        @keyframes leftMovement {
+            from{
+                top: 500px;
+                left: 1300px;
+            }
+            to{
+                top: 500px;
+                left: 0;
+            }
+            
+        }
+
+        .ball{
+
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border: 3px solid red;
+            border-radius: 50%;
+            margin: 5px;
+            padding: 5px;
+            position: relative;
+            top: 35%;
+            bottom: 45%;
+            left: 45%;
+
+             /* @keyframes duration | easing-function | delay |
+            iteration-count | direction | fill-mode | play-state | name */
+            animation: 10s ease-in-out 0s infinite alternate-reverse none running circleMovement;
+        }
+
+        @keyframes circleMovement {
+
+            0%{
+                top: 0;
+                left: 0;
+            }
+            30%{
+                top: 0;
+                left: 1300px;
+            }
+            60%{
+                top: 500px;
+                left: 700px;
+            }
+            80%{
+                top: 500px;
+                left: 0;
+            }
+            90%{
+                top: 500px;
+                left: 1300px;
+            }
+            95%{
+                top: 500px;
+                left: 700px;
+            }
+
+            100%{
+                top: 0;
+                left: 0;
+            }
+
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="box">
+
+        </div>
+
+        <div class="ball">
+
+        </div>
+         
+        <div class="box2">
+
+        </div>
+        
+    </div>
+
+</body>
+</html>
